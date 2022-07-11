@@ -1,0 +1,37 @@
+<div class="header">
+  <h1>{{ title }}</h1>
+</div> 
+<div class="main">
+  <div class="list-pokemons">
+    <app-search (searchChange)="searchPokemon($event)"></app-search>
+    <div *ngIf="pokemons.length > 0; else notItems" class="result">
+      <div
+        class="card-result"
+        *ngFor="let item of pokemons"
+        (click)="selectPokemon(item)"
+      >
+        <app-card-simple-pokemon [pokemon]="item"></app-card-simple-pokemon>
+      </div>
+    </div>
+    <ng-template #notItems>
+      <h5>No se encontro resultado</h5>
+    </ng-template>
+  </div>
+  <div class="pokemon-detail">
+    <app-card-detail-pokemon
+      *ngIf="selectedPokemon; else notItemSelected"
+      [pokemon]="selectedPokemon"
+    ></app-card-detail-pokemon>
+    <ng-template #notItemSelected>
+      <h5>Selecciona un Pokemon</h5>
+    </ng-template>
+  </div>
+  <div class="footer">
+    <app-pagination
+      [disabledNext]="disabledNext"
+      [disabledBack]="disabledBack"
+      (onBack)="paginationBack()"
+      (onNext)="paginationNext()"
+    ></app-pagination>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: true,\n  API_URL: 'https://pokeapi.co/api/v2',\n  ITEMS_BY_PAGE: 10\n};","map":null,"metadata":{},"sourceType":"module"}
