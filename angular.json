@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "carlosvasquez-listadopokemon:build:production"
+              "browserTarget": "Fer-pokedex:build:production"
             },
             "development": {
-              "browserTarget": "carlosvasquez-listadopokemon:build:development"
+              "browserTarget": "Fer-pokedex:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,11 +78,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "carlosvasquez-listadopokemon:build"
+            "browserTarget": "Fer-pokedex:build"
           }
         }
       }
     }
   },
-  "defaultProject": "carlosvasquez-listadopokemon"
+  "defaultProject": "Fer-pokedex"
 }
